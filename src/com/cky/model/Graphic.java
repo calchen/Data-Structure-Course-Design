@@ -6,5 +6,8 @@ package com.cky.model;
  * 类说明 ：用邻接矩阵存储的图
  */
 public class Graphic {
-
+	// 
+	private String key;
+	private String value;
+	
 }
