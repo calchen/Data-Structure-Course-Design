@@ -5,6 +5,6 @@ package com.cky.service;
  * 创建时间：2013年12月14日 下午4:25:52
  * 类说明 ：
  */
-public interface Floyd {
+public class Floyd {
 
 }
