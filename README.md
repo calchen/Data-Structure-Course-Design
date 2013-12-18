@@ -23,6 +23,10 @@
          3. 提供程序测试方案。
          4. 界面友好。
 
+主界面
+---
+![](https://github.com/calchen/Data-Structure-Course-Design/tree/develop/screenshots/Snap5.bmp "主界面")
+
 
 版本
 --
