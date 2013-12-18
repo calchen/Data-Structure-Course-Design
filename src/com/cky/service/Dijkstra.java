@@ -12,7 +12,7 @@ import com.cky.model.Graphic;
  * @version 1.0 <br />
  * @author 陈恺垣 chenkaiyuan1993@gmail.com
  */
-class Dijkstea {
+class Dijkstra {
 	/**
 	 * 邻接矩阵存储的图
 	 */
@@ -24,7 +24,7 @@ class Dijkstea {
 	 * @param graphic
 	 *            邻接矩阵存储的图
 	 */
-	public Dijkstea(Graphic graphic) {
+	public Dijkstra(Graphic graphic) {
 		this.graphic = graphic;
 	}
 

@@ -39,7 +39,7 @@ public class MainService {
 	 */
 	public String[] getPathByDijkstea(String A, String B) {
 		if (graphic != null) {
-			return new Dijkstea(graphic).getPath(A, B);
+			return new Dijkstra(graphic).getPath(A, B);
 		}
 		return null;
 	}
