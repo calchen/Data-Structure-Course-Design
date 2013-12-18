@@ -25,7 +25,7 @@
 
 主界面
 ---
-![](https://github.com/calchen/Data-Structure-Course-Design/tree/develop/screenshots/Snap5.bmp "主界面")
+![](https://github.com/calchen/Data-Structure-Course-Design/tree/develop/screenshots/Snap7.jpg "主界面")
 
 
 版本
