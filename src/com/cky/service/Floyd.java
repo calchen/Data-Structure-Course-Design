@@ -91,7 +91,7 @@ class Floyd {
 		Stack<Integer> stack = new Stack<Integer>();
 		stack.push(footstep[indexA][indexB]);
 		list.add(A);
-		int a = indexA, b = indexB;
+//		int a = indexA, b = indexB;
 //		while (!stack.isEmpty()) {
 //			int n = stack.pop();
 //			if (n != -1) {
