@@ -7,23 +7,35 @@ import java.util.Queue;
 import com.cky.model.Graphic;
 
 /**
- * 文件名：Dijkstea.java
- * 作   者： 陈恺垣 E-mail:chenkaiyuan1993@gmail.com
- * 创建时间：2013年12月16日 下午7:28:52
- * 类说明 ：
+ * Dijkstea算法实现获取两节点间最短路径节点 <br />
+ * 
+ * @version 1.0 <br />
+ * @author 陈恺垣 chenkaiyuan1993@gmail.com
  */
 class Dijkstea {
-	Graphic graphic ;
+	/**
+	 * 邻接矩阵存储的图
+	 */
+	private Graphic graphic;
 
+	/**
+	 * 构造方法
+	 * 
+	 * @param graphic
+	 *            邻接矩阵存储的图
+	 */
 	public Dijkstea(Graphic graphic) {
 		this.graphic = graphic;
 	}
 
 	/**
 	 * 获得从A到B的最短路径
+	 * 
 	 * @param A
+	 *            开始节点
 	 * @param B
-	 * @return A到B最短路径上所有经过的节点
+	 *            结束节点
+	 * @return A到B最短路径上所有经过的节点数组
 	 */
 	public String[] getPath(String A, String B) {
 		// TODO Auto-generated method stub
@@ -47,7 +59,7 @@ class Dijkstea {
 						cost[i] = graphic.getValue()[n][i] + cost[n];
 						footstep[i] = n;
 						queue.offer(i);
-					} else if(cost[i] == 0) {
+					} else if (cost[i] == 0) {
 						cost[i] = graphic.getValue()[n][i] + cost[n];
 						footstep[i] = n;
 						queue.offer(i);
@@ -55,20 +67,28 @@ class Dijkstea {
 				}
 			}
 		}
-		
+
 		// 获取从A到B的最短路径上的节点(逆序)
 		ArrayList<String> list = new ArrayList<String>();
-		for(int i = indexB;i != 0;) {
+		for (int i = indexB; !graphic.getNodeName(i).equals(A);) {
 			list.add(graphic.getNodeName(i));
 			i = footstep[i];
 		}
-		
-		// 将A到B的最短路径上的节点顺序存储到 result
-		String[] result = new String[list.size()];
-		for(int i = 0;i < result.length;i++) {
-			result[i] = list.get(result.length-i-1);
+		if (list.size() == 1 && graphic.getValue()[indexA][indexB] != 0) {
+			list.add(A);
+		} else if (list.size() > 1) {
+			list.add(A);
 		}
-		
+
+		// 将A到B的最短路径上的节点顺序存储到 result
+		String[] result = null;
+		if (list.size() != 1) {
+			result = new String[list.size()];
+			for (int i = 0; i < result.length; i++) {
+				result[i] = list.get(result.length - i - 1);
+			}
+		}
+
 		return result;
 	}
 
